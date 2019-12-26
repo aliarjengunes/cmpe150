@@ -1,0 +1,56 @@
+// separator	Question4.c_0_false.txt
+#include <stdio.h>
+#include <stdlib.h>
+#include <teachingcodes.h>
+
+void printArray(char arr[], int size) 
+{ 
+    int i; 
+    for (i=0; i < size; i++) 
+        printf("%c", arr[i]); 
+    printf("\n"); 
+} 
+
+// DO_NOT_EDIT_ANYTHING_ABOVE_THIS_LINE
+
+// separator	Question4.c_1_true.txt
+
+void sort(char arr[], int N){
+	int i,j;
+	char temp;
+
+	for(i=0;i<=N;i++){
+		for(j=1;j<N-i;j++){
+			if(arr[j-1]>arr[j] && arr[j]>='a' && arr[j]<='z');
+		}
+	}
+
+}
+
+
+
+
+
+// separator	Question4.c_2_false.txt
+// DO_NOT_EDIT_ANYTHING_BELOW_THIS_LINE
+
+int main() 
+{ 
+	TC_BEGIN;
+
+	char arr[100], temp;
+	int n = 0;
+	scanf("%c", &temp);
+	while(temp != '\n' && temp != '\r'){
+		arr[n++] = temp;
+		scanf("%c", &temp);
+	}
+
+	sort(arr, n);
+
+	printArray(arr, n); 
+
+	TC_END;
+	return 0; 
+}
+
