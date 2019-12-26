@@ -1,0 +1,78 @@
+// separator	Question3.c_0_false.txt
+#include <stdio.h>
+#include <stdlib.h>
+#include <teachingcodes.h>
+
+#define ABS(N) ((N<0)?-(N):(N))
+
+int distance(int r1, int c1, int r2, int c2){
+    return ABS(r1 - r2) + ABS(c1 - c2);
+}
+
+// DO_NOT_EDIT_ANYTHING_ABOVE_THIS_LINE
+
+// separator	Question3.c_1_true.txt
+
+void servableCustomers(char map[5][5], int fuel){
+	int i,j,dy,dx,counter=0;
+	char res[10];
+	for(i=0;i<5;i++){
+		for(j=0;j<5;j++){
+			if(map[i][j]=='D'){
+				dx=j;
+				dy=i;
+			}
+		}
+	}
+	for(i=0;i<5;i++){
+		for(j=0;j<5;j++){
+			if(map[i][j]=='a' && fuel>=distance(j,i,dx,dy)){res[counter]='a'; counter++;}
+			else if(map[i][j]=='b' && fuel>=distance(j,i,dx,dy)){res[counter]='b'; counter++;}
+			else if(map[i][j]=='c' && fuel>=distance(j,i,dx,dy)){res[counter]='c'; counter++;}
+			else if(map[i][j]=='d' && fuel>=distance(j,i,dx,dy)){res[counter]='d'; counter++;}
+			else if(map[i][j]=='e' && fuel>=distance(j,i,dx,dy)){res[counter]='e'; counter++;}
+			else if(map[i][j]=='f' && fuel>=distance(j,i,dx,dy)){res[counter]='f'; counter++;}
+			else if(map[i][j]=='g' && fuel>=distance(j,i,dx,dy)){res[counter]='g'; counter++;}
+			else if(map[i][j]=='h' && fuel>=distance(j,i,dx,dy)){res[counter]='h'; counter++;}
+			else if(map[i][j]=='i' && fuel>=distance(j,i,dx,dy)){res[counter]='i'; counter++;}
+		}
+	}
+	if(counter==0) printf("none");
+
+	for(i=0;i<counter;i++){
+		for(j=1;j<counter-i;j++){
+			if(res[j]<res[j-1]){
+				char temp=res[j];
+				res[j]=res[j-1];
+				res[j-1]=temp;
+			}
+		}
+	}
+	for(i=0;i<counter;i++){
+		printf("%c ",res[i]);
+	}
+}
+
+
+// separator	Question3.c_2_false.txt
+// DO_NOT_EDIT_ANYTHING_BELOW_THIS_LINE
+
+int main()
+{
+	TC_BEGIN;
+	
+    char map[5][5];
+    int i, j, fuel;
+    for(i=0; i<5; i++){
+        for(j=0; j<5; j++){
+            scanf("%c ", &map[i][j]);
+        }
+    }
+    scanf("%d", &fuel);
+	
+    servableCustomers(map, fuel);
+
+	TC_END;
+    return 0;
+}
+
