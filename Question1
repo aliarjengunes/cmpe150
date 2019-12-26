@@ -1,0 +1,23 @@
+
+#include <stdio.h>
+#include <teachingcodes.h>
+
+
+// DO_NOT_EDIT_ANYTHING_ABOVE_THIS_LINE
+
+
+
+// DO_NOT_EDIT_ANYTHING_BELOW_THIS_LINE
+
+
+int main() {
+	TC_BEGIN;
+
+	int n, m;
+	scanf("%d %d", &n, &m);
+	printf("%ld\n", doublefact(n)-doublefact(m));
+
+	TC_END;
+	return 0;
+}
+
