@@ -1,0 +1,52 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <teachingcodes.h>
+
+struct Course{
+	int code;
+	int credits;
+	int grade;
+};
+struct Student{
+	int ID;
+	float GPA;
+	char letterGrade;
+	struct Course courses[3];
+};
+
+// DO_NOT_EDIT_ANYTHING_ABOVE_THIS_LINE
+
+
+
+// DO_NOT_EDIT_ANYTHING_BELOW_THIS_LINE
+
+int main(){
+	TC_BEGIN;
+
+	struct Student students[10];
+	int N;
+
+	scanf("%d", &N);
+
+	for(int i=0; i<N; i++){
+		scanf("%d", &students[i].ID);
+		for(int j=0; j<3; j++){
+			scanf("%d", &students[i].courses[j].code);
+			scanf("%d", &students[i].courses[j].credits);
+			scanf("%d", &students[i].courses[j].grade);
+		}
+	}
+
+	calculateGPA(students, N);
+
+	for(int i=0; i<N; i++){
+		printf("%d : %.2f\n", students[i].ID, students[i].GPA);
+	}
+
+	TC_END;
+    return 0;
+}
+
+
+
