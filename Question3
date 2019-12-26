@@ -1,0 +1,36 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <teachingcodes.h>
+
+#define ABS(N) ((N<0)?-(N):(N))
+
+int distance(int r1, int c1, int r2, int c2){
+    return ABS(r1 - r2) + ABS(c1 - c2);
+}
+
+// DO_NOT_EDIT_ANYTHING_ABOVE_THIS_LINE
+
+
+
+// DO_NOT_EDIT_ANYTHING_BELOW_THIS_LINE
+
+int main()
+{
+	TC_BEGIN;
+	
+    char map[5][5];
+    int i, j, fuel;
+    for(i=0; i<5; i++){
+        for(j=0; j<5; j++){
+            scanf("%c ", &map[i][j]);
+        }
+    }
+    scanf("%d", &fuel);
+	
+    servableCustomers(map, fuel);
+
+	TC_END;
+    return 0;
+}
+
