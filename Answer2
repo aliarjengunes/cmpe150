@@ -1,0 +1,57 @@
+// separator	Question2.c_0_false.txt
+#include <stdio.h>
+#include <stdlib.h>
+#include <teachingcodes.h>
+
+#include <string.h>
+
+// DO_NOT_EDIT_ANYTHING_ABOVE_THIS_LINE
+
+// separator	Question2.c_1_true.txt
+
+
+
+
+// separator	Question2.c_2_false.txt
+// DO_NOT_EDIT_ANYTHING_BELOW_THIS_LINE
+
+int main()
+{
+	TC_BEGIN;
+	
+	char sentence[200] = "correctly change this string variable which will be printed at the end of the main function";
+	
+    // DO_NOT_EDIT_ANYTHING_ABOVE_THIS_LINE
+
+// separator	Question2.c_3_true.txt
+
+	int i;
+	char ref[20],word1[20],word2[20],word3[20],
+	word7[20],word6[20],word5[20],word4[20];
+	scanf("%s",&ref);
+	scanf("%s",&word1);scanf("%s",&word2);scanf("%s",&word3);
+	scanf("%s",&word4);scanf("%s",&word5);scanf("%s",&word6);
+	scanf("%s",&word7);
+
+	if(strcmp(ref,word1)>0) printf("%s ",word1);
+	if(strcmp(ref,word2)>0) printf("%s ",word2);
+	if(strcmp(ref,word3)>0) printf("%s ",word3);
+	if(strcmp(ref,word4)>0) printf("%s ",word4);
+	if(strcmp(ref,word5)>0) printf("%s ",word5);
+	if(strcmp(ref,word6)>0) printf("%s ",word6);
+	if(strcmp(ref,word7)>0) printf("%s",word7);
+
+	for(i=0;i<200;i++){
+		sentence[i]='\0';
+	}
+
+
+// separator	Question2.c_4_false.txt
+    // DO_NOT_EDIT_ANYTHING_BELOW_THIS_LINE
+
+    printf("%s", sentence);
+
+	TC_END;
+    return 0;
+}
+
